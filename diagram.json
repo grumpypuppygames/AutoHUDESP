@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "author": "Chris",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "ili9341", "id": "tft", "top": 60, "left": 150, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:15", "tft:CS", "green", [ "v0" ] ],
+    [ "esp:2", "tft:DC", "blue", [ "v0" ] ],
+    [ "esp:18", "tft:SCK", "yellow", [ "v0" ] ],
+    [ "esp:23", "tft:MOSI", "orange", [ "v0" ] ]
+  ]
+}
